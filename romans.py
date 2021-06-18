@@ -1,11 +1,11 @@
+numbers=[1,4,5,9,10,40,50,90,100,400,500,900,1000]
+romans= ['I','IV','V','IX','X','XL','L','XC','C','CD','D','CM','M']
 def int_to_romans(num):
     """
         Function converting a number to Roman Number
 
         int_to_romans(int->number)
     """
-    numbers=[1,4,5,9,10,40,50,90,100,400,500,900,1000]
-    romans= ['I','IV','V','IX','X','XL','L','XC','C','CD','D','CM','M']
     inttoromandict = {}
     for i in range(len(numbers)):
         inttoromandict[numbers[i]]=romans[i]
@@ -29,8 +29,6 @@ def romans_to_int(rom):
         
         romans_to_int(int->number)
     """
-    numbers=[1,4,5,9,10,40,50,90,100,400,500,900,1000]
-    romans= ['I','IV','V','IX','X','XL','L','XC','C','CD','D','CM','M']
     roman_to_int_dict = {}
     for i in range(len(numbers)):
         roman_to_int_dict[romans[i]]=numbers[i]
