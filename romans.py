@@ -6,18 +6,18 @@ def int_to_romans(num):
 
         int_to_romans(int->number)
     """
-    inttoromandict = {}
+    int_to_roman_dict = {}
     for i in range(len(numbers)):
-        inttoromandict[numbers[i]]=romans[i]
+        int_to_roman_dict[numbers[i]]=romans[i]
 
-    if num in inttoromandict:
-        return inttoromandict[num]
+    if num in int_to_roman_dict:
+        return int_to_roman_dict[num]
     else:
         roman = ''
         while(num>0):
-            myvalues  = [key for key in inttoromandict.keys() if key <= num]
+            myvalues  = [key for key in int_to_roman_dict.keys() if key <= num]
             if num >= myvalues[-1]:
-                roman+=inttoromandict[myvalues[-1]]
+                roman+=int_to_roman_dict[myvalues[-1]]
                 # print(num)
                 num-=myvalues[-1]
         return roman
@@ -46,5 +46,6 @@ def romans_to_int(rom):
         return int_ans
 
 
-print(int_to_romans(3304))
-print(romans_to_int('MMMCCCIV'))
+if __name__ == '__main__':
+    print(int_to_romans(3304))
+    print(romans_to_int('MMMCCCIV'))
